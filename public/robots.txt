@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+# Product summary: https://ghostswapai.xyz/llms.txt
+Sitemap: https://ghostswapai.xyz/sitemap.xml
+Sitemap: https://ghostswapai.xyz/launch/sitemap.xml

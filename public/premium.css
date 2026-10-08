@@ -1,0 +1,113 @@
+/* Ghost Swap premium layer. Keeps the violet base and adds electric cyan, gold, and glow. */
+:root {
+  --gs-ink: #070614;
+  --gs-violet: #8b5cff;
+  --gs-magenta: #d946ef;
+  --gs-cyan: #22d3ee;
+  --gs-gold: #f5c16c;
+  --gs-text: #f7f4ff;
+}
+html, body {
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(139, 92, 255, 0.45), transparent 60%),
+    radial-gradient(800px 480px at 100% 0%, rgba(34, 211, 238, 0.22), transparent 55%),
+    radial-gradient(700px 500px at 70% 110%, rgba(217, 70, 239, 0.2), transparent 50%),
+    #070614 !important;
+  color: var(--gs-text);
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at 50% 20%, #000 20%, transparent 75%);
+  z-index: 0;
+}
+#root, #seo-static { position: relative; z-index: 1; }
+h1, h2, .hero h1, [class*="hero"] h1 {
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+  background: linear-gradient(110deg, #ffffff 10%, #d8c4ff 45%, #7ef3ff 78%, #f5c16c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+a { text-underline-offset: 3px; }
+button, [role="button"], a[class*="primary"], [class*="cta"], [data-testid*="swap"] {
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+button[class*="primary"], a[class*="primary"], [class*="btn-primary"], [class*="Button"] {
+  box-shadow: 0 0 0 1px rgba(245, 193, 108, 0.35), 0 10px 40px rgba(139, 92, 255, 0.45);
+}
+button:hover, a[class*="primary"]:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.15) brightness(1.06);
+}
+[class*="panel"], [class*="card"], [class*="shell"], [class*="quote"], form {
+  border-color: rgba(176, 140, 255, 0.35) !important;
+  box-shadow: 0 20px 80px rgba(7, 6, 20, 0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+}
+header, nav {
+  backdrop-filter: blur(18px);
+}
+img[alt*="Ghost"], img[src*="wordmark"], img[src*="icon"] {
+  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.45));
+}
+::selection { background: #22d3ee; color: #070614; }
+
+header .brand-icon, a[data-testid="link-home"] .brand-icon {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain;
+  border-radius: 10px;
+}
+header .brand-wordmark { display: none !important; }
+
+/* Keep the original two-line headline colors. */
+h1, h1 span { background: none !important; color: #f7f4ff !important; -webkit-text-fill-color: #f7f4ff !important; }
+h1 em, h1 .violet { background: none !important; color: #8d63f6 !important; -webkit-text-fill-color: #8d63f6 !important; }
+
+a, button, [role="button"] { cursor: pointer; }
+a:hover, button:hover, nav a:hover {
+  color: #e9d5ff !important;
+  text-shadow: 0 0 18px rgba(157, 92, 255, 0.85);
+}
+nav a:hover, header a:hover {
+  background: rgba(139, 92, 255, 0.18);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(184, 140, 255, 0.45), 0 0 24px rgba(139, 92, 255, 0.35);
+}
+.primary:hover, a.primary:hover, button:hover {
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee) !important;
+  box-shadow: 0 0 0 1px #f5c16c, 0 12px 36px rgba(34, 211, 238, 0.35);
+  transform: translateY(-2px) scale(1.02);
+}
+.facts div:hover, [class*="card"]:hover, [class*="panel"]:hover {
+  background: linear-gradient(180deg, rgba(139,92,255,.22), rgba(34,211,238,.08)) !important;
+  transform: translateY(-3px);
+  transition: .18s ease;
+}
+.gs-cursor {
+  position: fixed; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+  border: 2px solid #c084fc; box-shadow: 0 0 18px #a855f7; pointer-events: none; z-index: 9999;
+  mix-blend-mode: screen; transition: transform .08s linear;
+}
+.gs-features {
+  position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px; width: min(1180px, calc(100% - 48px)); margin: 8px auto 36px;
+}
+.gs-features span { display: block; color: #f5c16c; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin: 4px 0; }
+.gs-features button {
+  text-align: left; color: #f7f4ff; background: #120c1c; border: 1px solid #3a2c55;
+  border-radius: 16px; padding: 14px 16px;
+}
+.gs-features button strong { display: block; color: #d8b4fe; }
+.gs-features button:hover { border-color: #22d3ee; box-shadow: 0 0 28px rgba(139,92,255,.45); }
+.gs-features button.is-on { background: linear-gradient(180deg, #2a1858, #12101c); }
+@media (max-width: 800px) { .gs-features { grid-template-columns: 1fr 1fr; } }
+
+.dk-popup, .dk-overlay, [data-testid='dialog-token-launch'] { display: none !important; }

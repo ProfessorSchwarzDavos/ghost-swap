@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Dark is the design system's default, not an opt-in: the class stays on. -->
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07060b" />
+    <script>
+      /* Pool pages (testnet) run without the site analytics tracker. */
+      (function () { try {
+        var p = location.pathname.slice('/'.length - 1), k = 'ghostswap.poolAnalyticsOff';
+        if (p === '/pool' || p.indexOf('/pool/') === 0) { localStorage.setItem('umami.disabled', '1'); localStorage.setItem(k, '1'); }
+        else if (localStorage.getItem(k)) { localStorage.removeItem('umami.disabled'); localStorage.removeItem(k); }
+      } catch (e) {} })();
+    </script>
+    <title>Screener Beta for Solana assets | Ghost Swap</title>
+    <meta name="description" content="Search a dated provider-reported Solana xStock and PreStock catalog for research. Listings are not live quotes, verification or investment advice." />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <meta property="og:site_name" content="Ghost Swap" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Screener Beta for Solana assets | Ghost Swap" />
+    <meta property="og:description" content="Search a dated provider-reported Solana xStock and PreStock catalog for research. Listings are not live quotes, verification or investment advice." />
+    
+    <meta property="og:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <meta property="og:image:alt" content="Ghost Swap Private Swaps banner" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Screener Beta for Solana assets | Ghost Swap" />
+    <meta name="twitter:description" content="Search a dated provider-reported Solana xStock and PreStock catalog for research. Listings are not live quotes, verification or investment advice." />
+    <meta name="twitter:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <style>#seo-static{min-height:100vh;box-sizing:border-box;background:#17111f;color:#f5eefb;font:18px/1.6 system-ui,sans-serif;padding:3rem max(24px,calc((100vw - 1050px)/2))}#seo-static a{color:#d9b5ff}#seo-static nav{display:flex;flex-wrap:wrap;gap:1rem}#seo-static h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;max-width:800px;margin:3rem 0 1.5rem}#seo-static p{max-width:760px;overflow-wrap:anywhere}</style>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+    <script type="module" crossorigin src="/assets/index-C1DpNrdH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CtoBo6pe.css">
+    <link rel="stylesheet" href="/premium.css">
+  </head>
+  <body>
+    <div id="root"><div id="seo-static"><header><a href="/">Ghost Swap</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/swap">Swap</a><a href="https://rewards.ghostswapai.xyz">Rewards</a><a href="/docs">Docs</a></nav></header><main><h1>Screener Beta</h1><p>Search a dated provider-reported Solana asset catalog for research. Listings and backing are not independently verified. Research does not connect a wallet or initiate a trade.</p></main><footer><a href="/docs">Read the guide</a> · <a href="/help">Get help</a></footer></div></div>
+  <script src="https://i.replit.com/script.js" async="" data-website-id="a7ce3d21-13dd-4347-aefa-448902ca6619"></script></body>
+</html>

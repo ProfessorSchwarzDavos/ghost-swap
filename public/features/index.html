@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features | Ghost Swap</title>
+    <meta name="description" content="Ghost Swap product features: fee share, private volume, hidden orders, anti-MEV routing, stealth wallets, chat swaps, OTC, and proof of reserves." />
+    <link rel="icon" type="image/png" href="/favicon-32.png?v=3" />
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; background: #140c3a; color: #f4f0ff; font: 18px/1.6 system-ui, sans-serif; }
+      header, main, footer { width: min(980px, calc(100% - 40px)); margin: 0 auto; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+      a { color: #d9b5ff; }
+      nav { display: flex; gap: 16px; flex-wrap: wrap; }
+      .logo { display: flex; align-items: center; gap: 12px; color: white; text-decoration: none; font-weight: 700; }
+      .logo img { width: 48px; height: 48px; border-radius: 12px; }
+      h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.05; margin: 12px 0 16px; }
+      .lede { max-width: 720px; color: #ddd4f5; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 28px 0 48px; }
+      article { background: #1d1450; border: 1px solid #3a2c86; border-radius: 16px; padding: 18px 18px 8px; }
+      h2 { font-size: 1.15rem; margin: 0 0 8px; }
+      p { margin: 0 0 14px; }
+      footer { padding: 12px 0 40px; color: #b7abd8; }
+    </style>
+      <link rel="stylesheet" href="/premium.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/"><img src="/brand/icon.png" alt="" /> Ghost Swap</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/swap">Swap</a>
+        <a href="/features">Features</a>
+        <a href="/docs">Docs</a>
+      </nav>
+    </header>
+    <main>
+      <p>Ghost Swap</p>
+      <h1>Trade without showing your wallet, size, or entry.</h1>
+      <p class="lede">A private swap so copy-traders and sniper bots cannot front-run the order. You review the quote, then send the deposit from your own wallet.</p>
+      <div class="grid">
+        <article>
+          <h2>1. Fee share to holders</h2>
+          <p>A cut of every swap fee goes to stakers or buybacks, so using the product moves value back to holders.</p>
+        </article>
+        <article>
+          <h2>2. Live private-volume dashboard</h2>
+          <p>Total shielded volume, fees paid, and buybacks stay public. Usage is visible even when each order is not.</p>
+        </article>
+        <article>
+          <h2>3. Private limit orders and DCA</h2>
+          <p>Hidden orders that other wallets cannot see or hunt. The next step after a private market swap.</p>
+        </article>
+        <article>
+          <h2>4. Anti-MEV routing by default</h2>
+          <p>Every swap is protected from sandwich bots. Each receipt shows how much that route saved.</p>
+        </article>
+        <article>
+          <h2>5. Stealth wallets</h2>
+          <p>One-click fresh receiving wallets, so tracker tools cannot follow the same address.</p>
+        </article>
+        <article>
+          <h2>6. Telegram and X bot</h2>
+          <p>Private swaps from chat, for people who already trade there. No public order posted with the command.</p>
+        </article>
+        <article>
+          <h2>7. Whale OTC desk</h2>
+          <p>Matched large trades that never touch the pool. No pool slippage and no visible footprint.</p>
+        </article>
+        <article>
+          <h2>8. Proof of reserves and an audit badge</h2>
+          <p>A published audit and on-chain proof of reserves, so a privacy product can still show what it holds.</p>
+        </article>
+        <article>
+          <h2>ZK upgrade path</h2>
+          <p>A zero-knowledge version of the dark pool, dated and separate from the live private-swap route.</p>
+        </article>
+        <article>
+          <h2>Agent mode</h2>
+          <p>An API so an agent can request a private quote and hand you the deposit instructions.</p>
+        </article>
+      </div>
+    </main>
+    <footer><a href="/swap">Open a swap</a> · <a href="/docs">Read the guide</a></footer>
+  </body>
+</html>

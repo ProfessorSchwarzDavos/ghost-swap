@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Dark is the design system's default, not an opt-in: the class stays on. -->
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07060b" />
+    <script>
+      /* Pool pages (testnet) run without the site analytics tracker. */
+      (function () { try {
+        var p = location.pathname.slice('/'.length - 1), k = 'ghostswap.poolAnalyticsOff';
+        if (p === '/pool' || p.indexOf('/pool/') === 0) { localStorage.setItem('umami.disabled', '1'); localStorage.setItem(k, '1'); }
+        else if (localStorage.getItem(k)) { localStorage.removeItem('umami.disabled'); localStorage.removeItem(k); }
+      } catch (e) {} })();
+    </script>
+    <title>Ghost Swap ZK pool (local-development preview)</title>
+    <meta name="description" content="ZK pool local-development preview: not deployed on any public network or audited. Development proving keys could forge proofs. Do not deposit real funds." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ghostswapai.xyz/pool" />
+    <meta property="og:site_name" content="Ghost Swap" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ghost Swap ZK pool (local-development preview)" />
+    <meta property="og:description" content="ZK pool local-development preview: not deployed on any public network or audited. Development proving keys could forge proofs. Do not deposit real funds." />
+    <meta property="og:url" content="https://ghostswapai.xyz/pool" />
+    <meta property="og:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <meta property="og:image:alt" content="Ghost Swap Private Swaps banner" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ghost Swap ZK pool (local-development preview)" />
+    <meta name="twitter:description" content="ZK pool local-development preview: not deployed on any public network or audited. Development proving keys could forge proofs. Do not deposit real funds." />
+    <meta name="twitter:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <style>#seo-static{min-height:100vh;box-sizing:border-box;background:#17111f;color:#f5eefb;font:18px/1.6 system-ui,sans-serif;padding:3rem max(24px,calc((100vw - 1050px)/2))}#seo-static a{color:#d9b5ff}#seo-static nav{display:flex;flex-wrap:wrap;gap:1rem}#seo-static h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;max-width:800px;margin:3rem 0 1.5rem}#seo-static p{max-width:760px;overflow-wrap:anywhere}</style>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+    <script type="module" crossorigin src="/assets/index-C1DpNrdH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CtoBo6pe.css">
+    <link rel="stylesheet" href="/premium.css">
+  </head>
+  <body>
+    <div id="root"><div class="app-shell"><main data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:8:9" data-component-name="main" class="pool-scope dark min-h-[70vh] bg-background px-4 py-8 font-sans text-foreground" style="--background:252 29.4% 3.3%;--foreground:44 35.5% 93.9%;--border:255 25.6% 15.3%;--card:252 26.3% 7.5%;--card-foreground:44 35.5% 93.9%;--popover:252 28.3% 10.4%;--popover-foreground:44 35.5% 93.9%;--primary:263 76.8% 61.2%;--primary-foreground:0 0.0% 100.0%;--secondary:255 37.8% 14.5%;--secondary-foreground:260 100.0% 85.3%;--muted:252 30.6% 9.6%;--muted-foreground:255 16.5% 66.7%;--accent:255 41.0% 20.6%;--accent-foreground:260 100.0% 85.3%;--destructive:358 83.3% 64.7%;--destructive-foreground:352 40.5% 7.3%;--input:256 24.3% 21.8%;--ring:262 82.7% 70.6%;--chart-1:263 76.8% 61.2%;--chart-2:260 100.0% 85.3%;--chart-3:260 51.6% 42.9%;--chart-4:304 68.4% 61.6%;--chart-5:220 92.9% 66.7%;--sidebar:249 25.9% 5.3%;--sidebar-foreground:35 15.0% 77.8%;--sidebar-border:255 25.6% 15.3%;--sidebar-primary:263 76.8% 61.2%;--sidebar-primary-foreground:0 0.0% 100.0%;--sidebar-accent:255 37.8% 14.5%;--sidebar-accent-foreground:260 100.0% 85.3%;--sidebar-ring:262 82.7% 70.6%;--primary-border:hsl(263 76.8% 61.2%);--card-border:255 25.6% 15.3%;--popover-border:255 25.6% 15.3%;--app-font-sans:Inter, system-ui, sans-serif;--app-font-mono:JetBrains Mono, ui-monospace, monospace;--radius:0.75rem;color-scheme:dark"><div data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:9:4" data-component-name="div" class="mx-auto flex w-full max-w-xl flex-col gap-4"><div data-replit-metadata="artifacts/solana-privacy-swap/src/pool/testnet-warning.tsx:4:9" data-component-name="CautionBanner" role="status" class="flex w-full gap-3 rounded-lg border p-3 text-sm border-destructive/40 bg-destructive/10 text-foreground" data-testid="banner-testnet"><div data-replit-metadata="artifacts/ghostswap-design-system/src/components/ui/caution-banner.tsx:63:6" data-component-name="div" class="min-w-0 flex-1 space-y-1"><p data-replit-metadata="artifacts/solana-privacy-swap/src/pool/testnet-warning.tsx:5:4" data-component-name="CautionBannerTitle" class="text-sm font-semibold leading-tight">Local-development preview. Development proving keys, which could be used to forge proofs. Do not deposit real funds. Not deployed on any public network. Not audited.</p></div></div><h1 data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:12:8" data-component-name="h1" class="text-2xl font-extrabold">ZK pool</h1><p data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:13:8" data-component-name="p" class="text-sm text-muted-foreground">No network is connected yet. This is Ghost Swap&#x27;s own ZK tier, not the dark pool on NEAR. It is built and tested on local chains, not deployed on any public network.</p><p data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:14:8" data-component-name="p" class="text-sm text-muted-foreground">Experimental shielded pool. Deposits and withdrawals remain public. Amounts, timing and a small pool can make activity easy to match. No anonymity guarantee.</p><a data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:15:8" data-component-name="Link" href="/pool/what-stays-public" class="text-ring underline">What stays public: safety and privacy limits</a><p data-replit-metadata="artifacts/solana-privacy-swap/src/pool/public-guide.tsx:16:8" data-component-name="p" class="text-sm text-muted-foreground">Enable JavaScript to view the development interface. Private keys, balances and activity stay in the client; they are not included in this public page.</p></div></main></div></div>
+  <script src="https://i.replit.com/script.js" async="" data-website-id="a7ce3d21-13dd-4347-aefa-448902ca6619"></script></body>
+</html>

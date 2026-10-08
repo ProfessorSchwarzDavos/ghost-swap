@@ -1,0 +1,42 @@
+{
+ "GET /api/liquidity/zec-dark": {
+  "file": "001-api_liquidity_zec_dark.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/near/trends?view=new": {
+  "file": "002-api_near_trends_view_new.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/near/trends?view=trending": {
+  "file": "003-api_near_trends_view_trending.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/pool/chains": {
+  "file": "004-api_pool_chains.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/rewards/config": {
+  "file": "005-api_rewards_config.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/swap/chains": {
+  "file": "006-api_swap_chains.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /api/swap/near/service-status?fromChain=sol": {
+  "file": "007-api_swap_near_service_status_fromChain_sol.json",
+  "status": 200,
+  "type": "application/json"
+ },
+ "GET /docs/whitepaper?print": {
+  "file": "008-docs_whitepaper_print.bin",
+  "status": 200,
+  "type": "text/html"
+ }
+}

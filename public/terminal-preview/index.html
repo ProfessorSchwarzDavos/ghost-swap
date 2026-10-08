@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Dark is the design system's default, not an opt-in: the class stays on. -->
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07060b" />
+    <script>
+      /* Pool pages (testnet) run without the site analytics tracker. */
+      (function () { try {
+        var p = location.pathname.slice('/'.length - 1), k = 'ghostswap.poolAnalyticsOff';
+        if (p === '/pool' || p.indexOf('/pool/') === 0) { localStorage.setItem('umami.disabled', '1'); localStorage.setItem(k, '1'); }
+        else if (localStorage.getItem(k)) { localStorage.removeItem('umami.disabled'); localStorage.removeItem(k); }
+      } catch (e) {} })();
+    </script>
+    <title>Founder terminal preview | Ghost Swap</title>
+    <meta name="description" content="Preview the planned cross-chain trading terminal with NEAR Intents. Fictional tokens and simulated orders only; no wallet connection or live execution." />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <meta property="og:site_name" content="Ghost Swap" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Founder terminal preview | Ghost Swap" />
+    <meta property="og:description" content="Preview the planned cross-chain trading terminal with NEAR Intents. Fictional tokens and simulated orders only; no wallet connection or live execution." />
+    
+    <meta property="og:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <meta property="og:image:alt" content="Ghost Swap Private Swaps banner" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Founder terminal preview | Ghost Swap" />
+    <meta name="twitter:description" content="Preview the planned cross-chain trading terminal with NEAR Intents. Fictional tokens and simulated orders only; no wallet connection or live execution." />
+    <meta name="twitter:image" content="https://ghostswapai.xyz/brand/social-share-private-swaps.jpg" />
+    <style>#seo-static{min-height:100vh;box-sizing:border-box;background:#17111f;color:#f5eefb;font:18px/1.6 system-ui,sans-serif;padding:3rem max(24px,calc((100vw - 1050px)/2))}#seo-static a{color:#d9b5ff}#seo-static nav{display:flex;flex-wrap:wrap;gap:1rem}#seo-static h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;max-width:800px;margin:3rem 0 1.5rem}#seo-static p{max-width:760px;overflow-wrap:anywhere}</style>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+    <script type="module" crossorigin src="/assets/index-C1DpNrdH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CtoBo6pe.css">
+    <link rel="stylesheet" href="/premium.css">
+  </head>
+  <body>
+    <div id="root"><div id="seo-static"><header><a href="/">Ghost Swap</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/swap">Swap</a><a href="https://rewards.ghostswapai.xyz">Rewards</a><a href="/docs">Docs</a></nav></header><main><h1>Cross-chain trading terminal with NEAR Intents — founder preview</h1><p>A read-only founder demo with fictional tokens and simulated calculations. It does not execute trades or fund an order.</p><p>Separately, wNEAR rewards have been distributed to qualifying DARK holders, and one ZEC-token award has been paid; further ZEC awards require separate approval. StonkFun reports DARK graduated; the reported 1% creator-fee configuration and claim authority remain unverified. The arbitrary 0.3% demo fee is not a live quote or the reported creator fee.</p><section><h2>Explore more</h2><ul><li><a href="/founder">All founder previews</a></li></ul></section></main><footer><a href="/docs">Read the guide</a> · <a href="/help">Get help</a></footer></div></div>
+  <script src="https://i.replit.com/script.js" async="" data-website-id="a7ce3d21-13dd-4347-aefa-448902ca6619"></script></body>
+</html>
