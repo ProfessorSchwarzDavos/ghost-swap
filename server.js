@@ -51,4 +51,4 @@ http.createServer((req, res) => {
   if (f) return send(res, 200, MIME[path.extname(f).toLowerCase()] || 'application/octet-stream', fs.readFileSync(f), f.endsWith('.html') ? 'no-cache' : 'public, max-age=3600');
   if (!path.extname(u.pathname)) { const i = fileFor('/'); if (i) return send(res, 200, MIME['.html'], fs.readFileSync(i)); }
   send(res, 404, 'text/plain', 'Not found');
-}).listen(process.env.PORT || 3000, () => console.log('Site running on port ' + (process.env.PORT || 3000)));
+}).listen(process.env.PORT || 3000, '0.0.0.0', () => console.log('Site running on port ' + (process.env.PORT || 3000)));
